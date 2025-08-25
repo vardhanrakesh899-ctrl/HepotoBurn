@@ -1,100 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HepatoBurn™ – Natural Liver Support for Easier Fat Loss</title>
-  <meta name="description" content="Discover how HepatoBurn supports liver health and metabolism. Read the benefits and go to the official offer.">
-  <meta name="robots" content="index,follow">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HepatoBurn™ | Natural Liver & Fat Support</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root{
-      --bg:#0b1220; --card:#111a2b; --text:#e8eefc; --muted:#b7c2da; --brand:#ff6b35; --accent:#19c37d;
+      --bg:#f7f8fb; --text:#0b132a; --muted:#6b7280; --brand:#4f46e5; --brand-2:#6366f1; --cta:#ff6b35; --cta-2:#ff3e00; --card:#ffffff;
+      --shadow:0 10px 25px rgba(0,0,0,.08);
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:linear-gradient(180deg,#0b1220,#0a0f1a);color:var(--text)}
-    a{text-decoration:none}
-    .wrap{max-width:1024px;margin:0 auto;padding:20px}
-    header{position:sticky;top:0;z-index:50;background:rgba(11,18,32,.7);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.06)}
-    .brand{font-weight:800;letter-spacing:.3px}
-    .btn{display:inline-block;padding:12px 18px;border-radius:12px;background:var(--brand);color:white;font-weight:700;box-shadow:0 8px 28px rgba(255,107,53,.35);transition:transform .15s ease,box-shadow .2s}
-    .btn:hover{transform:translateY(-1px);box-shadow:0 12px 32px rgba(255,107,53,.55)}
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center;padding:22px 16px 8px}
-    h1{font-size:34px;line-height:1.1;margin:10px 0}
-    p.lead{font-size:18px;color:var(--muted)}
-    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:16px}
-    .bullets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px;list-style:none;padding:0;margin:16px 0}
-    .bullets li{background:#0c1426;border:1px solid rgba(255,255,255,.06);padding:10px 12px;border-radius:12px;color:#d8e3ff}
-    img.prod{width:100%;border-radius:14px;border:1px solid rgba(255,255,255,.06);background:#0c1426}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
-    .btn-ghost{border:1px solid rgba(255,255,255,.18);color:#dbe7ff;background:transparent}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:10px 0}
-    .center{text-align:center}
-    footer{opacity:.8;font-size:12px;margin:26px 0 40px}
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .bullets{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:1fr}
-      header{gap:10px}
-      .btn{padding:12px 16px}
-      h1{font-size:28px}
-    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+
+    /* ---------- Utility ---------- */
+    .container{max-width:1200px;margin:0 auto;padding:0 1rem}
+    .btn{display:inline-block;background:var(--cta);color:#fff;padding:1rem 2rem;border-radius:14px;font-weight:600;text-decoration:none;box-shadow:0 8px 20px rgba(255,107,53,.35);transition:transform .2s ease, box-shadow .2s ease, background .2s ease}
+    .btn:hover{background:var(--cta-2);transform:translateY(-2px);box-shadow:0 14px 28px rgba(255,62,0,.35)}
+
+    /* ---------- Hero ---------- */
+    header{position:relative;color:#fff;text-align:center;overflow:hidden}
+    header .hero-bg{position:absolute;inset:0;background:linear-gradient(rgba(12,14,35,.65),rgba(12,14,35,.65)),url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;transform:scale(1.05)}
+    header .hero-wrap{position:relative;padding:7rem 1rem 6rem}
+    header h1{font-size:clamp(2.2rem,5vw,3.4rem);letter-spacing:.2px;margin-bottom:1rem;font-weight:700}
+    header p{font-size:clamp(1rem,2.8vw,1.25rem);opacity:.95;margin:0 auto 2rem;max-width:720px}
+
+    /* ---------- Sections ---------- */
+    section{padding:4rem 0}
+    .section-title{font-size:clamp(1.6rem,3vw,2.2rem);text-align:center;margin-bottom:2.2rem;color:#111827}
+
+    /* ---------- Benefits ---------- */
+    .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+    .card{background:var(--card);border-radius:18px;box-shadow:var(--shadow);padding:2rem;text-align:center}
+    .card img{width:72px;height:72px;margin-bottom:1rem}
+    .card h3{font-size:1.2rem;margin-bottom:.4rem}
+    .card p{color:var(--muted)}
+
+    /* ---------- Trust badges ---------- */
+    .trust{display:flex;flex-wrap:wrap;gap:1.2rem;justify-content:center;margin-top:2rem}
+    .trust .badge{background:#fff;border-radius:999px;padding:.65rem 1.1rem;box-shadow:0 4px 12px rgba(0,0,0,.06);display:flex;align-items:center;gap:.6rem}
+    .trust .badge img{height:26px;width:26px}
+    .trust .badge span{font-weight:600;color:#111827;font-size:.95rem}
+
+    /* ---------- Testimonials ---------- */
+    .testimonials{background:#eef2ff;border-radius:20px;padding:3rem 1.25rem}
+    .t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem}
+    .t-card{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:1.25rem;text-align:center}
+    .t-card img{width:80px;height:80px;border-radius:50%;object-fit:cover;margin:.25rem auto 0.75rem}
+    .t-quote{font-style:italic}
+    .stars{display:flex;justify-content:center;gap:2px;margin:.6rem 0 .2rem}
+    .star{width:18px;height:18px;display:inline-block}
+    .t-name{margin-top:.35rem;font-weight:600;color:#111827}
+    .t-meta{font-size:.9rem;color:var(--muted)}
+
+    /* ---------- Guarantee ---------- */
+    .guarantee{background:#fff;border-radius:18px;box-shadow:var(--shadow);text-align:center;padding:2.5rem 1.5rem}
+    .guarantee img{width:110px;margin-bottom:.6rem}
+
+    /* ---------- CTA block ---------- */
+    .cta{text-align:center}
+    .cta img{max-width:220px;width:70%;display:block;margin:1.5rem auto;border-radius:16px;box-shadow:var(--shadow)}
+
+    /* ---------- Footer ---------- */
+    footer{background:#0b1020;color:#a8b0c2;padding:3rem 0;margin-top:3rem}
+    footer .f-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+    footer a{color:#c9cfe0;text-decoration:none}
+    footer a:hover{text-decoration:underline}
+    footer .brand{font-weight:700;color:#e5e7ff}
+
+    /* ---------- Scroll reveal animations ---------- */
+    [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+    [data-reveal="left"]{transform:translateX(-24px)}
+    [data-reveal="right"]{transform:translateX(24px)}
+    [data-reveal].visible{opacity:1;transform:translate(0)}
   </style>
 </head>
 <body>
-  <header class="wrap">
-    <div class="brand">HepatoBurn™</div>
-    <a class="btn" href="https://www.hepatoburn.com/welcome-h-v?hop=vardhan7" target="_blank" rel="nofollow noopener">Order from Official Site</a>
+  <!-- Hero -->
+  <header>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-wrap container" data-reveal>
+      <h1>HepatoBurn™</h1>
+      <p>Boost Liver Health & Burn Fat Naturally — clean, safe, and trusted by wellness-focused customers.</p>
+      <a href="#buy" class="btn">Buy Now — 60‑Day Guarantee</a>
+    </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="card">
-        <h1>Liver-first fat loss made simple.</h1>
-        <p class="lead">HepatoBurn supports healthy liver function so your body can burn fat more efficiently — without extreme diets.*</p>
-        <ul class="bullets">
-          <li>✔ Supports natural detox & liver health*</li>
-          <li>✔ Encourages a faster, steadier metabolism*</li>
-          <li>✔ Plant-based ingredients. Non‑GMO*</li>
-          <li>✔ 60‑day money‑back guarantee*</li>
-        </ul>
-        <div class="cta-row">
-          <a class="btn" href="https://www.hepatoburn.com/welcome-h-v?hop=vardhan7" target="_blank" rel="nofollow noopener">See Today’s Best Price</a>
-          <a class="btn btn-ghost" href="https://www.hepatoburn.com/welcome-h-v?hop=vardhan7" target="_blank" rel="nofollow noopener">Learn more on official site</a>
-        </div>
+  <!-- Benefits -->
+  <section class="container" aria-label="Benefits">
+    <h2 class="section-title" data-reveal>Why Choose HepatoBurn?</h2>
+    <div class="benefits">
+      <div class="card" data-reveal="left">
+        <img src="https://img.icons8.com/color/96/leaf.png" alt="Detox Support icon" />
+        <h3>Natural Detox Support</h3>
+        <p>Gently supports your liver’s natural detox pathways with plant-based ingredients.</p>
       </div>
-      <div class="card">
-        <picture>
-          <!-- Try common asset paths on vendor site; if blocked, the image area still looks neat -->
-          <source srcset="https://www.hepatoburn.com/assets/images/product-bottles.png" type="image/png">
-          <img class="prod" src="https://www.hepatoburn.com/images/bottle-bundle.png" alt="HepatoBurn bottles">
-        </picture>
+      <div class="card" data-reveal>
+        <img src="https://img.icons8.com/color/96/fire-element.png" alt="Metabolism icon" />
+        <h3>Steady Metabolism</h3>
+        <p>Promotes efficient fat-burning while sustaining clean daily energy.</p>
       </div>
-    </section>
+      <div class="card" data-reveal="right">
+        <img src="https://img.icons8.com/color/96/organic-food.png" alt="Safe & Natural icon" />
+        <h3>Plant‑Based & Safe</h3>
+        <p>Non‑GMO formula crafted in GMP‑compliant facilities for peace of mind.</p>
+      </div>
+    </div>
 
-    <section class="grid-3">
-      <div class="card">
-        <h3>How it works</h3>
-        <p>Targets the liver–metabolism connection with a curated blend to help your body process fats and carbs more efficiently.*</p>
-      </div>
-      <div class="card">
-        <h3>What’s inside</h3>
-        <p>Powerful botanicals and antioxidants designed to support detox pathways, digestion and metabolic balance.*</p>
-      </div>
-      <div class="card">
-        <h3>Who it’s for</h3>
-        <p>Adults 30+ looking for an easier, more sustainable path to fat loss and better metabolic health.*</p>
-      </div>
-    </section>
+    <div class="trust" data-reveal>
+      <div class="badge"><img src="https://img.icons8.com/fluency/96/verified-badge.png" alt="Verified"><span>Trusted by 10,000+</span></div>
+      <div class="badge"><img src="https://img.icons8.com/color/96/medal.png" alt="GMP"><span>GMP Compliant</span></div>
+      <div class="badge"><img src="https://img.icons8.com/color/96/natural-food.png" alt="Natural"><span>100% Natural</span></div>
+      <div class="badge"><img src="https://img.icons8.com/color/96/security-checked.png" alt="Secure"><span>Secure Checkout</span></div>
+    </div>
+  </section>
 
-    <section class="card center">
-      <h3>Ready to try HepatoBurn?</h3>
-      <p class="lead">Exclusive online pricing available today only on the official website.</p>
-      <a class="btn" href="https://www.hepatoburn.com/welcome-h-v?hop=vardhan7" target="_blank" rel="nofollow noopener">Go to Official Offer</a>
-    </section>
+  <!-- Testimonials -->
+  <section class="container testimonials" aria-label="Testimonials">
+    <h2 class="section-title" data-reveal>What Our Customers Say</h2>
+    <div class="t-grid">
+      <article class="t-card" data-reveal="left">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah" />
+        <div class="stars" aria-label="5 star rating">{<!--stars-->}</div>
+        <p class="t-quote">“I've lost 7 kg in 2 months and feel lighter than ever.”</p>
+        <div class="t-name">Sarah</div>
+        <div class="t-meta">Age 34</div>
+      </article>
+      <article class="t-card" data-reveal>
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David" />
+        <div class="stars" aria-label="5 star rating">{<!--stars-->}</div>
+        <p class="t-quote">“My digestion improved and I feel full of energy all day.”</p>
+        <div class="t-name">David</div>
+        <div class="t-meta">Age 41</div>
+      </article>
+      <article class="t-card" data-reveal>
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya" />
+        <div class="stars" aria-label="5 star rating">{<!--stars-->}</div>
+        <p class="t-quote">“Finally, a supplement that works without side effects.”</p>
+        <div class="t-name">Priya</div>
+        <div class="t-meta">Age 29</div>
+      </article>
+      <article class="t-card" data-reveal>
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Arjun" />
+        <div class="stars" aria-label="5 star rating">{<!--stars-->}</div>
+        <p class="t-quote">“I feel more active during workouts, and my body feels cleansed.”</p>
+        <div class="t-name">Arjun</div>
+        <div class="t-meta">Age 36</div>
+      </article>
+      <article class="t-card" data-reveal="right">
+        <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Emily" />
+        <div class="stars" aria-label="5 star rating">{<!--stars-->}</div>
+        <p class="t-quote">“The best investment in my health! I recommend HepatoBurn to my friends.”</p>
+        <div class="t-name">Emily</div>
+        <div class="t-meta">Age 42</div>
+      </article>
+    </div>
+  </section>
 
-    <footer>
-      <p>*These statements are for informational purposes and are not intended to diagnose, treat, cure, or prevent any disease. Results vary. This page contains affiliate links — as an affiliate, we may earn from qualifying purchases at no extra cost to you.</p>
-    </footer>
-  </main>
+  <!-- Guarantee -->
+  <section class="container" aria-label="Guarantee">
+    <div class="guarantee" data-reveal>
+      <img src="https://img.icons8.com/color/96/guarantee.png" alt="60-Day Guarantee" />
+      <h3>60‑Day Money‑Back Guarantee</h3>
+      <p>If you’re not 100% satisfied, return it within 60 days for a full refund. No questions asked.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="container cta" id="buy" aria-label="Buy">
+    <h2 class="section-title" data-reveal>Ready to Transform Your Health?</h2>
+    <img src="https://images.unsplash.com/photo-1606813909339-d4dfd860f06a?auto=format&fit=crop&w=900&q=80" alt="HepatoBurn Bottle" data-reveal>
+    <a href="#" class="btn" data-reveal>Get Yours Today</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container f-cols">
+      <div><div class="brand">HepatoBurn™</div><p style="margin-top:.5rem">Natural liver-first support for a balanced metabolism.</p></div>
+      <div><strong>Company</strong><br/><a href="#">About</a><br/><a href="#">Contact</a></div>
+      <div><strong>Legal</strong><br/><a href="#">Privacy Policy</a><br/><a href="#">Terms of Service</a></div>
+    </div>
+    <div class="container" style="text-align:center;margin-top:1.2rem">© 2025 HepatoBurn. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // ---- Insert SVG stars into all .stars blocks
+    const starSVG = `
+      <svg class="star" viewBox="0 0 24 24" fill="#fbbf24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.77 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+      </svg>`;
+    document.querySelectorAll('.stars').forEach(el=>{el.innerHTML = starSVG.repeat(5)});
+
+    // ---- Simple IntersectionObserver for scroll reveal
+    const revealEls = document.querySelectorAll('[data-reveal]');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+    },{threshold: .18});
+    revealEls.forEach(el=>io.observe(el));
+  </script>
 </body>
 </html>
