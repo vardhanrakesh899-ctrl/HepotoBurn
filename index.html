@@ -12,37 +12,30 @@
     }
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
-
-    /* ---------- Utility ---------- */
     .container{max-width:1200px;margin:0 auto;padding:0 1rem}
     .btn{display:inline-block;background:var(--cta);color:#fff;padding:1rem 2rem;border-radius:14px;font-weight:600;text-decoration:none;box-shadow:0 8px 20px rgba(255,107,53,.35);transition:transform .2s ease, box-shadow .2s ease, background .2s ease}
     .btn:hover{background:var(--cta-2);transform:translateY(-2px);box-shadow:0 14px 28px rgba(255,62,0,.35)}
 
-    /* ---------- Hero ---------- */
     header{position:relative;color:#fff;text-align:center;overflow:hidden}
     header .hero-bg{position:absolute;inset:0;background:linear-gradient(rgba(12,14,35,.65),rgba(12,14,35,.65)),url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;transform:scale(1.05)}
     header .hero-wrap{position:relative;padding:7rem 1rem 6rem}
-    header h1{font-size:clamp(2.2rem,5vw,3.4rem);letter-spacing:.2px;margin-bottom:1rem;font-weight:700}
+    header h1{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:1rem;font-weight:700}
     header p{font-size:clamp(1rem,2.8vw,1.25rem);opacity:.95;margin:0 auto 2rem;max-width:720px}
 
-    /* ---------- Sections ---------- */
     section{padding:4rem 0}
     .section-title{font-size:clamp(1.6rem,3vw,2.2rem);text-align:center;margin-bottom:2.2rem;color:#111827}
 
-    /* ---------- Benefits ---------- */
     .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
     .card{background:var(--card);border-radius:18px;box-shadow:var(--shadow);padding:2rem;text-align:center}
     .card img{width:72px;height:72px;margin-bottom:1rem}
     .card h3{font-size:1.2rem;margin-bottom:.4rem}
     .card p{color:var(--muted)}
 
-    /* ---------- Trust badges ---------- */
     .trust{display:flex;flex-wrap:wrap;gap:1.2rem;justify-content:center;margin-top:2rem}
     .trust .badge{background:#fff;border-radius:999px;padding:.65rem 1.1rem;box-shadow:0 4px 12px rgba(0,0,0,.06);display:flex;align-items:center;gap:.6rem}
     .trust .badge img{height:26px;width:26px}
     .trust .badge span{font-weight:600;color:#111827;font-size:.95rem}
 
-    /* ---------- Testimonials ---------- */
     .testimonials{background:#eef2ff;border-radius:20px;padding:3rem 1.25rem}
     .t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem}
     .t-card{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:1.25rem;text-align:center}
@@ -53,22 +46,18 @@
     .t-name{margin-top:.35rem;font-weight:600;color:#111827}
     .t-meta{font-size:.9rem;color:var(--muted)}
 
-    /* ---------- Guarantee ---------- */
     .guarantee{background:#fff;border-radius:18px;box-shadow:var(--shadow);text-align:center;padding:2.5rem 1.5rem}
     .guarantee img{width:110px;margin-bottom:.6rem}
 
-    /* ---------- CTA block ---------- */
     .cta{text-align:center}
     .cta img{max-width:220px;width:70%;display:block;margin:1.5rem auto;border-radius:16px;box-shadow:var(--shadow)}
 
-    /* ---------- Footer ---------- */
     footer{background:#0b1020;color:#a8b0c2;padding:3rem 0;margin-top:3rem}
     footer .f-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
     footer a{color:#c9cfe0;text-decoration:none}
     footer a:hover{text-decoration:underline}
     footer .brand{font-weight:700;color:#e5e7ff}
 
-    /* ---------- Scroll reveal animations ---------- */
     [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
     [data-reveal="left"]{transform:translateX(-24px)}
     [data-reveal="right"]{transform:translateX(24px)}
@@ -82,7 +71,7 @@
     <div class="hero-wrap container" data-reveal>
       <h1>HepatoBurn™</h1>
       <p>Boost Liver Health & Burn Fat Naturally — clean, safe, and trusted by wellness-focused customers.</p>
-      <a href="#buy" class="btn">Buy Now — 60‑Day Guarantee</a>
+      <a href="https://afe2fubhn2oeay5bjcdeyawiub.hop.clickbank.net" target="_blank" class="btn">Buy Now — 60-Day Guarantee</a>
     </div>
   </header>
 
@@ -102,8 +91,8 @@
       </div>
       <div class="card" data-reveal="right">
         <img src="https://img.icons8.com/color/96/organic-food.png" alt="Safe & Natural icon" />
-        <h3>Plant‑Based & Safe</h3>
-        <p>Non‑GMO formula crafted in GMP‑compliant facilities for peace of mind.</p>
+        <h3>Plant-Based & Safe</h3>
+        <p>Non-GMO formula crafted in GMP-compliant facilities for peace of mind.</p>
       </div>
     </div>
 
@@ -121,35 +110,35 @@
     <div class="t-grid">
       <article class="t-card" data-reveal="left">
         <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah" />
-        <div class="stars" aria-label="5 star rating">{<!--stars-->}</div>
+        <div class="stars" aria-label="5 star rating"></div>
         <p class="t-quote">“I've lost 7 kg in 2 months and feel lighter than ever.”</p>
         <div class="t-name">Sarah</div>
         <div class="t-meta">Age 34</div>
       </article>
       <article class="t-card" data-reveal>
         <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David" />
-        <div class="stars" aria-label="5 star rating">{<!--stars-->}</div>
+        <div class="stars" aria-label="5 star rating"></div>
         <p class="t-quote">“My digestion improved and I feel full of energy all day.”</p>
         <div class="t-name">David</div>
         <div class="t-meta">Age 41</div>
       </article>
       <article class="t-card" data-reveal>
         <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya" />
-        <div class="stars" aria-label="5 star rating">{<!--stars-->}</div>
+        <div class="stars" aria-label="5 star rating"></div>
         <p class="t-quote">“Finally, a supplement that works without side effects.”</p>
         <div class="t-name">Priya</div>
         <div class="t-meta">Age 29</div>
       </article>
       <article class="t-card" data-reveal>
         <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Arjun" />
-        <div class="stars" aria-label="5 star rating">{<!--stars-->}</div>
+        <div class="stars" aria-label="5 star rating"></div>
         <p class="t-quote">“I feel more active during workouts, and my body feels cleansed.”</p>
         <div class="t-name">Arjun</div>
         <div class="t-meta">Age 36</div>
       </article>
       <article class="t-card" data-reveal="right">
         <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Emily" />
-        <div class="stars" aria-label="5 star rating">{<!--stars-->}</div>
+        <div class="stars" aria-label="5 star rating"></div>
         <p class="t-quote">“The best investment in my health! I recommend HepatoBurn to my friends.”</p>
         <div class="t-name">Emily</div>
         <div class="t-meta">Age 42</div>
@@ -161,7 +150,7 @@
   <section class="container" aria-label="Guarantee">
     <div class="guarantee" data-reveal>
       <img src="https://img.icons8.com/color/96/guarantee.png" alt="60-Day Guarantee" />
-      <h3>60‑Day Money‑Back Guarantee</h3>
+      <h3>60-Day Money-Back Guarantee</h3>
       <p>If you’re not 100% satisfied, return it within 60 days for a full refund. No questions asked.</p>
     </div>
   </section>
@@ -170,7 +159,7 @@
   <section class="container cta" id="buy" aria-label="Buy">
     <h2 class="section-title" data-reveal>Ready to Transform Your Health?</h2>
     <img src="https://images.unsplash.com/photo-1606813909339-d4dfd860f06a?auto=format&fit=crop&w=900&q=80" alt="HepatoBurn Bottle" data-reveal>
-    <a href="#" class="btn" data-reveal>Get Yours Today</a>
+    <a href="https://afe2fubhn2oeay5bjcdeyawiub.hop.clickbank.net" target="_blank" class="btn" data-reveal>Get Yours Today</a>
   </section>
 
   <!-- Footer -->
@@ -184,14 +173,12 @@
   </footer>
 
   <script>
-    // ---- Insert SVG stars into all .stars blocks
     const starSVG = `
       <svg class="star" viewBox="0 0 24 24" fill="#fbbf24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.77 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/>
       </svg>`;
     document.querySelectorAll('.stars').forEach(el=>{el.innerHTML = starSVG.repeat(5)});
 
-    // ---- Simple IntersectionObserver for scroll reveal
     const revealEls = document.querySelectorAll('[data-reveal]');
     const io = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
